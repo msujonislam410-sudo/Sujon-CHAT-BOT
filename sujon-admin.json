@@ -1,0 +1,10 @@
+{
+  "ownerName": "Md Sujon Islam",
+  "botName": "Sujon Admin Bot",
+  "ownerID": "61583702870310",        // https://www.facebook.com/profile.php?id=61583702870310
+  "prefix": "/",
+  "autoReply": true,
+  "welcomeMessage": "আসসালামু আলাইকুম 😎 সুজনের অফিসিয়াল বটে স্বাগতম!",
+  "adminReply": "👑 Admin: Md Sujon Islam\nFacebook ID: 61583702870310",
+  "defaultReply": "ধন্যবাদ মেসেজ করার জন্য ❤️"
+}
