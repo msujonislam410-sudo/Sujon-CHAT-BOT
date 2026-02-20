@@ -2,8 +2,8 @@ module.exports.config = {
  name: "info",
  version: "1.0.0",
  hasPermssion: 0,
- credits: "SHAHADAT SAHU",
- description: "Bot information command",
+ credits: "Md Sujon Islam",
+ description: "Sujon Bot information command",
  commandCategory: "For users",
  hide: true,
  usages: "",
@@ -14,7 +14,6 @@ module.exports.run = async function ({ api, event, args, Users, Threads }) {
  const { threadID } = event;
  const request = global.nodemodule["request"];
  const fs = global.nodemodule["fs-extra"];
- const moment = require("moment-timezone");
 
  const { configPath } = global.client;
  delete require.cache[require.resolve(configPath)];
@@ -32,9 +31,9 @@ module.exports.run = async function ({ api, event, args, Users, Threads }) {
  const totalUsers = global.data.allUserID.length;
  const totalThreads = global.data.allThreadID.length;
 
- const msg = `╭⭓ ⪩ 𝐁𝐎𝐓𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 ⪨
+ const msg = `╭⭓ ⪩ 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 ⪨
 │
-├─ 🤖 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ─꯭─⃝‌‌𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭
+├─ 🤖 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : 𝐒𝐮𝐣𝐨𝐧 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭
 ├─ ☢️ 𝗣𝗿𝗲𝗳𝗶𝘅 : ${config.PREFIX}
 ├─ ♻️ 𝗣𝗿𝗲𝗳𝗶𝘅 𝗕𝗼𝘅 : ${prefix}
 ├─ 🔶 𝗠𝗼𝗱𝘂𝗹𝗲𝘀 : ${commands.size}
@@ -44,7 +43,7 @@ module.exports.run = async function ({ api, event, args, Users, Threads }) {
 
 ╭⭓ ⪩ 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢 ⪨
 │
-├─ 👑 𝗡𝗮𝗺𝗲 : Sujon 𝐈𝐬𝐥𝐚𝐦
+├─ 👑 𝗡𝗮𝗺𝗲 : Md Sujon Islam
 ├─ 📲 𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸 :
 │ facebook.com/61583702870310
 ├─ 💌 𝗠𝗲𝘀𝘀𝗲𝗻𝗴𝗲𝗿 :
@@ -61,8 +60,7 @@ module.exports.run = async function ({ api, event, args, Users, Threads }) {
 ├─ 🧿 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿𝘀 : ${totalUsers}
 ╰───────⭓
 
-❤️ 𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 🌺
- 😍─꯭─⃝‌‌𝐒𝐡𝐚𝐡𝐚𝐝𝐚𝐭 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭😘`;
+❤️ Thanks for using Sujon Chat Bot 😎🔥`;
 
  const imgLinks = [
  "https://i.imgur.com/zqsuJnX.jpeg",
@@ -80,5 +78,7 @@ module.exports.run = async function ({ api, event, args, Users, Threads }) {
  }, threadID, () => fs.unlinkSync(__dirname + "/cache/info.jpg"));
  };
 
- return request(encodeURI(imgLink)).pipe(fs.createWriteStream(__dirname + "/cache/info.jpg")).on("close", callback);
+ return request(encodeURI(imgLink))
+   .pipe(fs.createWriteStream(__dirname + "/cache/info.jpg"))
+   .on("close", callback);
 };
